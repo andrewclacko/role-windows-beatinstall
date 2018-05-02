@@ -4,5 +4,5 @@
 - name: Copy over zip installer
   win_copy:
     src: /tmp/{{ beats }}-{{ version }}-windows-x86_64.zip
-    dest: "C:\Program Files"
+    dest: C:\Program Files\
     remote_src: False 
