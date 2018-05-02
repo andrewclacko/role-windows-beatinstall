@@ -6,3 +6,9 @@
     src: /tmp/{{ beats }}-{{ version }}-windows-x86_64.zip
     dest: C:\Program Files\
     remote_src: False 
+
+- name: Unzip windows installer to Program Files
+  win_unzip:
+    src: C:\Program Files\{{ beats }}-{{ version }}-windows-x86_64.zip
+    dest: C:\Program files\{{ beats }}
+    creates: C:\Program Files\{{ beats }}
