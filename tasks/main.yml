@@ -10,5 +10,5 @@
 - name: Unzip windows installer to Program Files
   win_unzip:
     src: C:\Program Files\{{ beats }}-{{ version }}-windows-x86_64.zip
-    dest: C:\Program files\{{ beats }}
+    dest: C:\Program files
     creates: C:\Program Files\{{ beats }}
