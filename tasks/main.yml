@@ -16,7 +16,7 @@
 
 - name: Copy a folder recursively where the source is on the remote host
   win_copy:
-    src: C:\{{ beats }}-{{ version }}-windows-x86_64
+    src: C:\{{ beats }}-{{ version }}-windows-x86_64\*
     dest: C:\Program Files\{{ beats }}
     remote_src: True
 
