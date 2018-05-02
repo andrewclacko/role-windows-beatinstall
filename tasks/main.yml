@@ -12,3 +12,5 @@
     src: C:\Program Files\{{ beats }}-{{ version }}-windows-x86_64.zip
     dest: C:\Program files
     creates: C:\Program Files\{{ beats }}
+    delete_archive: yes
+
