@@ -1,4 +1,8 @@
 ---
-# tasks file for new
-- name: Get disk facts
-  win_disk_facts:
+# tasks file for Windows beats deployment
+
+- name: Copy over zip installer
+  win_copy:
+    src: /tmp/{{ beats }}-{{ version }}-windows-x86_64.zip
+    dest: "C:\Program Files"
+    remote_src: False 
