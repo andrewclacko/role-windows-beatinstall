@@ -4,12 +4,12 @@
 - name: Copy over zip installer
   win_copy:
     src: /tmp/{{ beats }}-{{ version }}-windows-x86_64.zip
-    dest: C:\Program Files\
+    dest: C:\
     remote_src: False 
 
 - name: Unzip windows installer to Program Files
   win_unzip:
-    src: C:\Program Files\{{ beats }}-{{ version }}-windows-x86_64.zip
+    src: C:\{{ beats }}-{{ version }}-windows-x86_64.zip
     dest: C:\
     creates: C:\{{ beats }}
     delete_archive: yes
