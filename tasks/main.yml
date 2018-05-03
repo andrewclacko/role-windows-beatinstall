@@ -26,5 +26,5 @@
     dest: C:\powershellbeatinstall.ps1
 
 - name: Run the powershell command on windows box
-  win_psexec:
+  win_command:
     command: C:\powershellbeatinstall.ps1
