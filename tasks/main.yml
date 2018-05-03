@@ -37,6 +37,11 @@
 - name: Run the powershell command on windows box
   win_shell: C:\powershellbeatinstall.ps1
 
+- name: copying over beat.yml template
+  win_template:
+    src: "{{ role }}-{{ beats }}.j2"
+    dest: C:\Program Files\{{ beats }}\{{ beats }}.yml
+
 - name: Start the "{{ beats }}" service
   win_shell: Start-Service {{ beats }}
   args:
