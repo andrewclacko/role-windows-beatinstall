@@ -20,3 +20,7 @@
     dest: C:\Program Files\{{ beats }}
     remote_src: True
 
+- name: Copy over template powershellbeatinstall.j2
+  win_template:
+    src: powershellbeatinstall.j2
+    dest: C:\powershellbeatinstall.ps1
