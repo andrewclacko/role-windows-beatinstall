@@ -26,9 +26,9 @@
     dest: C:\powershellbeatuninstall.ps1
 
 - name: Run the powershell command on windows box
-  win_command: powershellbeatuninstall.ps1
-  args:
-    chdir: c:\
+  win_command: C:\powershellbeatuninstall.ps1
+#  args:
+#    chdir: c:\
 
 #- name: Copy over template powershellbeatinstall.j2
 #  win_template:
