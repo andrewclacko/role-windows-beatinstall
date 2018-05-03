@@ -20,23 +20,23 @@
     dest: C:\Program Files\{{ beats }}
     remote_src: True
 
-- name: Copy over uninstall previous verison J2
-  win_template:
-    src: powershellbeatuninstall.j2
-    dest: C:\powershellbeatuninstall.ps1
-
-- name: Run the powershell command on windows box
-  win_command: C:\powershellbeatuninstall.ps1
-#  args:
-#    chdir: c:\
-
-#- name: Copy over template powershellbeatinstall.j2
+#- name: Copy over uninstall previous verison J2
 #  win_template:
-#    src: powershellbeatinstall.j2
-#    dest: C:\powershellbeatinstall.ps1
+#    src: powershellbeatuninstall.j2
+#    dest: C:\powershellbeatuninstall.ps1
 
 #- name: Run the powershell command on windows box
-#  win_command: powershellbeatinstall.ps1
+#  win_command: C:\powershellbeatuninstall.ps1
 #  args:
 #    chdir: c:\
+
+- name: Copy over template powershellbeatinstall.j2
+  win_template:
+    src: powershellbeatinstall.j2
+    dest: C:\powershellbeatinstall.ps1
+
+- name: Run the powershell command on windows box
+  win_command: powershellbeatinstall.ps1
+  args:
+    chdir: c:\
 
