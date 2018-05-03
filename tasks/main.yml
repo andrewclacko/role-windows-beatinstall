@@ -25,5 +25,6 @@
     src: powershellbeatinstall.j2
     dest: C:\powershellbeatinstall.ps1
 
-- win_psexec:
-  command: C:\powershellbeatinstall.ps1
+- name: Run the powershell command on windows box
+  win_psexec:
+    command: C:\powershellbeatinstall.ps1
