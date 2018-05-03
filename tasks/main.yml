@@ -38,4 +38,6 @@
   win_shell: C:\powershellbeatinstall.ps1
 
 - name: Start the "{{ beats }}" service
-  win_command: C:\Program Files\{{ beats }}> Start-Service {{ beats }}
+  win_shell: Start-Service {{ beats }}
+  args:
+    chdir: C:\Program Files\{{ beats }}
