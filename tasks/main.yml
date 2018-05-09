@@ -25,6 +25,11 @@
     src: powershellbeatuninstall.j2
     dest: C:\powershellbeatuninstall-{{ beats }}.ps1
 
+- name: Stop the "{{ beats }}" service
+  win_shell: Stop-Service {{ beats }}
+  args:
+    chdir: C:\Program Files\{{ beats }}
+
 - name: Run the powershell command on windows box
   win_shell: C:\powershellbeatuninstall-{{ beats }}.ps1
   args:
