@@ -33,6 +33,7 @@
   win_shell: Stop-Service {{ beats }}
   args:
     chdir: C:\Program Files\{{ beats }}
+    ignore_errors: yes
 
 - name: Copy over template powershellbeatinstall.j2
   win_template:
